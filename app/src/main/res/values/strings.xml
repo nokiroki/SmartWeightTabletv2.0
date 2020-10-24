@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">YFSmartWeight</string>
+    <string name="title_activity_dish_big">DishBigActivity</string>
+    <!-- Strings used for fragments for navigation -->
+
+    <!-- Strings for dialog panel -->
+    <string name="dish_description">#Description</string>
+    <string name="mass_compare_dialog">%d / %d</string>
+    <string name="cancel_button">Отменить</string>
+    <string name="for_proceed">Для продолжения приложите карточку!</string>
+    <string name="card_got">Считываем информацию с метки</string>
+    
+    <!-- Strings for final activity -->
+    <string name="name">Имя - %s</string>
+    <string name="position">Ресторан - %s</string>
+    <string name="date">Дата - %s</string>
+    <string name="time">Время - %s</string>
+
+    <string name="dish">Блюдо - %s</string>
+    <string name="weight_current">Вес блюда - %s</string>
+    <string name="weight_require">Необходимый вес - %s</string>
+    <string name="rating">%d / 5</string>
+    <string name="problem">#Проблема (недовес или перевес)</string>
+    <string name="database_info">Заносим в базу данных</string>
+    <string name="ok_button">OK</string>
+
+    <string-array name="database_info">
+        <item>Заносим в базу данных</item>
+        <item>Готово!</item>
+    </string-array>
+
+    <string-array name="problem">
+        <item>Недовес!</item>
+        <item>Перевес!</item>
+        <item>Всё в порядке</item>
+    </string-array>
+
+
+
+</resources>
+

@@ -1,0 +1,16 @@
+CREATE TABLE dish (ID INTEGER PRIMARY KEY AUTOINCREMENT, DISH STRING, PHOTO STRING, MASS INTEGER);
+INSERT INTO dish (ID, DISH, PHOTO, MASS) VALUES (1, 'Гунканы с лососем', 'gunkani_losos', 200);
+INSERT INTO dish (ID, DISH, PHOTO, MASS) VALUES (2, 'Запеченный ролл с креветкой', 'zapechennii_roll_s_crevetkoi', 200);
+INSERT INTO dish (ID, DISH, PHOTO, MASS) VALUES (3, 'Запеченный ролл с лососем', 'zapechennii_roll_s_lososem', 200);
+INSERT INTO dish (ID, DISH, PHOTO, MASS) VALUES (4, 'Поке с креветками', 'poke_s_crevetkami', 200);
+INSERT INTO dish (ID, DISH, PHOTO, MASS) VALUES (5, 'Поке с лососем', 'poke_s_lososem', 200);
+INSERT INTO dish (ID, DISH, PHOTO, MASS) VALUES (6, 'Поке с тунцом', 'poke_s_tuncom', 200);
+INSERT INTO dish (ID, DISH, PHOTO, MASS) VALUES (7, 'Лосось', 'losos', 200);
+INSERT INTO dish (ID, DISH, PHOTO, MASS) VALUES (8, 'Севиче с лососем', 'seviche_s_lososem', 200);
+INSERT INTO dish (ID, DISH, PHOTO, MASS) VALUES (9, 'Снежная калифорния', 'snezhnaya_kalifornia', 200);
+INSERT INTO dish (ID, DISH, PHOTO, MASS) VALUES (10, 'Суши с лососем', 'sushi_s_lososem', 200);
+INSERT INTO dish (ID, DISH, PHOTO, MASS) VALUES (11, 'Темпура с лососем', 'tempura_s_lososem', 200);
+INSERT INTO dish (ID, DISH, PHOTO, MASS) VALUES (12, 'Темпура с лососем терияки', 'tempura_losos', 200);
+INSERT INTO dish (ID, DISH, PHOTO, MASS) VALUES (13, 'Том ям с креветками', 'tom_yam_s_krevetkami', 200);
+INSERT INTO dish (ID, DISH, PHOTO, MASS) VALUES (14, 'Филадельфия с лососем', 'philadelphia_s_lososem', 200);
+INSERT INTO dish (ID, DISH, PHOTO, MASS) VALUES (15, 'Филадельфия с угрем', 'philadelphia_s_ugrem', 200);
