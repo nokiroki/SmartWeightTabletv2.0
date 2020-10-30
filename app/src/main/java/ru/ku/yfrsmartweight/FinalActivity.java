@@ -44,6 +44,8 @@ public class FinalActivity extends AppCompatActivity {
     private TextView serverAnswer;
     private Button myButton;
 
+    private ExecutorService downloadPool;
+
     private IWebSocketInterface mWebSocket;
     private class MWebSocketListener extends IWebSocketListener.Stub {
 
@@ -78,7 +80,7 @@ public class FinalActivity extends AppCompatActivity {
                     final JSONObject dataTop = json.getJSONObject("data").getJSONObject("top");
                     final JSONObject dataRear = json.getJSONObject("data").getJSONObject("rear");
 
-                    ExecutorService downloadPool = Executors.newFixedThreadPool(2);
+                    downloadPool = Executors.newFixedThreadPool(2);
 
                     class downloadPic implements Runnable {
 
@@ -118,8 +120,7 @@ public class FinalActivity extends AppCompatActivity {
                     }
                     downloadPool.execute(new downloadPic(dataTop, imageTop));
                     downloadPool.execute(new downloadPic(dataRear, imageRear));
-                    myButton.setVisibility(View.VISIBLE);
-                    downloadPool.shutdown();
+                    //myButton.setVisibility(View.VISIBLE);
                 }
 
             } catch (JSONException e) {
@@ -165,7 +166,7 @@ public class FinalActivity extends AppCompatActivity {
 
         myButton = findViewById(R.id.final_ok_button);
 
-        myButton.setVisibility(View.INVISIBLE);
+        //myButton.setVisibility(View.INVISIBLE);
 
         myButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -228,6 +229,7 @@ public class FinalActivity extends AppCompatActivity {
 
     @Override
     protected void onDestroy() {
+        downloadPool.shutdown();
         super.onDestroy();
         unbindService(sc);
     }
