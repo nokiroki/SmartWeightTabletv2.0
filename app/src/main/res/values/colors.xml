@@ -26,6 +26,8 @@
 
     <color name="result_with_problem">#FF005C</color>
     <color name="result_without_problem">#00DAA6</color>
+    <color name="result_background">#FFFFFF</color>
+    <color name="result_photo_background">#000000</color>
 
 </resources>
 

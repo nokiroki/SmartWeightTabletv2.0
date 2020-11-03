@@ -62,6 +62,8 @@
 
     <string name="rating_case_not_good">%s\n\n%d г</string>
     <string name="rating_case_all_good">Текущий вес соответствует технологической карте</string>
+    <string name="result_photo_text">Ваше фото</string>
+    <string name="result_photo_example_text">В техкарте</string>
 
 
 </resources>

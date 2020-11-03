@@ -48,11 +48,10 @@
             android:id="@+id/final_ok_button"
             android:layout_width="400dp"
             android:layout_height="400dp"
-            android:text="@string/ok_button"
             android:layout_gravity="center"
-            android:textSize="24sp"
             android:clickable="true"
-            />
+            android:text="@string/ok_button"
+            android:textSize="24sp" />
 
     </LinearLayout>
 
@@ -107,8 +106,8 @@
                 android:layout_width="250dp"
                 android:layout_height="250dp"
                 android:layout_marginHorizontal="30dp"
-                android:contentDescription="TODO"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:contentDescription="TODO" />
 
             <ImageView
                 android:id="@+id/final_photo_rear"
