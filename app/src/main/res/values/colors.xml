@@ -12,5 +12,20 @@
     <color name="ratingTextRed">#FF0000</color>
     <color name="ratingTextGreen">#5AFF00</color>
 
+    <!-- Colors for new screen -->
+
+    <color name="dishes">#000000</color>
+
+    <color name="lower_panel">#F7F9FB</color>
+    <color name="some_id">#BDC5CB</color>
+    <color name="id_names">#000000</color>
+    <color name="some_white_text">#FFFFFF</color>
+
+    <color name="ok_button">#FF5700</color>
+    <color name="ok_button_pressed">#853105</color>
+
+    <color name="result_with_problem">#FF005C</color>
+    <color name="result_without_problem">#00DAA6</color>
+
 </resources>
 

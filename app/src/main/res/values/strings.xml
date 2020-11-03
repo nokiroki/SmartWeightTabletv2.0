@@ -35,6 +35,33 @@
         <item>Всё в порядке</item>
     </string-array>
 
+    <!-- String values for new final screen -->
+
+    <string name="your_photo">Ваше фото</string>
+    <string name="pattern_photo">В техкарте</string>
+
+    <string name="some_dish">Блюдо</string>
+    <string name="dish_final">#dish_name</string>
+
+    <string name="some_required_weight">Вес по техкарте</string>
+    <string name="required_weight">#mass</string>
+
+    <string name="some_weight">Текущий вес</string>
+    <string name="weight">#mass</string>
+    
+    <string name="some_id">Имя сотрудника</string>
+    <string name="id_employee">#employee_name</string>
+    <string name="some_id_restaurant">Ресторан</string>
+    <string name="id_restaurant">#restaurant_name</string>
+
+    <string name="ok_button_final">OK</string>
+
+    <string name="date_and_time">Дата и время</string>
+    <string name="date_final">#date</string>
+    <string name="time_final">#time</string>
+
+    <string name="rating_case_not_good">%s\n\n%d г</string>
+    <string name="rating_case_all_good">Текущий вес соответствует технологической карте</string>
 
 
 </resources>

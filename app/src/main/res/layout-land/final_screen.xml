@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/rectangle_1">
+
+
+        <TextView
+            android:id="@+id/some_id_employee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="42dp"
+            android:text="@string/some_id"
+            android:lineSpacingExtra="11sp"
+            android:translationY="-5.7sp"
+            android:gravity="top"
+            android:textSize="21sp"
+            android:letterSpacing="0.02"
+            android:textColor="@color/some_id"
+            />
+        
+        <TextView
+            android:id="@+id/id_employee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/some_id_employee"
+            android:layout_alignStart="@id/some_id_employee"
+            android:layout_marginTop="8dp"
+            android:text="@string/id_employee"
+            android:lineSpacingExtra="6sp"
+            android:translationY="-2.77sp"
+            android:gravity="top"
+            android:textSize="26sp"
+            android:letterSpacing="0.02"
+            android:textColor="@color/id_names"
+            />
+
+        <TextView
+            android:id="@+id/some_id_restaurant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_employee"
+            android:layout_alignStart="@id/some_id_employee"
+            android:layout_marginTop="16dp"
+            android:text="@string/id_employee"
+            android:lineSpacingExtra="11sp"
+            android:translationY="-5.7sp"
+            android:gravity="top"
+            android:textSize="21sp"
+            android:letterSpacing="0.02"
+            android:textColor="@color/some_id"
+            />
+
+        <TextView
+            android:id="@+id/id_restaurant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/some_id_restaurant"
+            android:layout_alignStart="@id/some_id_employee"
+            android:layout_marginTop="8dp"
+            android:text="@string/id_restaurant"
+            android:lineSpacingExtra="6sp"
+            android:translationY="-2.77sp"
+            android:gravity="top"
+            android:textSize="26sp"
+            android:letterSpacing="0.02"
+            android:textColor="@color/id_names"
+            />
+        
+        <Button
+            android:id="@+id/ok_button_final"
+            android:layout_width="350dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/id_restaurant"
+            android:layout_alignStart="@id/some_id_employee"
+            android:background="@drawable/ok_final_button"
+            android:layout_marginTop="32dp"
+            android:text="@string/ok_button"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textColor="@color/some_white_text"
+            android:lineSpacingExtra="0sp"
+            android:clickable="true"
+            />
+
+        <TextView
+            android:id="@+id/date_and_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/some_id_employee"
+            android:layout_alignTop="@id/some_id_employee"
+            android:layout_marginStart="250dp"
+            android:text="@string/date_and_time"
+            android:lineSpacingExtra="11sp"
+            android:translationY="-5.7sp"
+            android:gravity="top"
+            android:textSize="21sp"
+            android:letterSpacing="0.02"
+            android:textColor="@color/some_id"
+            />
+
+        <TextView
+            android:id="@+id/date_final"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/date_and_time"
+            android:layout_alignStart="@id/date_and_time"
+            android:layout_marginTop="8dp"
+            android:text="@string/date_final"
+            android:lineSpacingExtra="6sp"
+            android:translationY="-2.77sp"
+            android:gravity="top"
+            android:textSize="26sp"
+            android:letterSpacing="0.02"
+            android:textColor="@color/id_names"
+            />
+
+        <TextView
+            android:id="@+id/time_final"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/date_final"
+            android:layout_alignTop="@id/date_final"
+            android:layout_marginStart="16dp"
+            android:text="@string/time_final"
+            android:lineSpacingExtra="6sp"
+            android:translationY="-2.77sp"
+            android:gravity="top"
+            android:textSize="26sp"
+            android:letterSpacing="0.02"
+            android:textColor="@color/id_names"
+            />
+        
+        <TextView
+            android:id="@+id/rating_text_all_good"
+            android:layout_width="400dp"
+            android:layout_height="268dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="64dp"
+            android:layout_marginEnd="48dp"
+            android:background="@drawable/rating_rectangle_good"
+            android:text="@string/rating_case_all_good"
+            android:gravity="center"
+            android:lineSpacingExtra="4sp"
+            android:textColor="@color/some_white_text"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.002"
+            android:visibility="invisible"
+            />
+
+        <TextView
+            android:id="@+id/rating_text_not_good"
+            android:layout_width="400dp"
+            android:layout_height="268dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="64dp"
+            android:layout_marginEnd="48dp"
+            android:background="@drawable/rating_rectangle_not_good"
+            android:text="@string/rating_case_not_good"
+            android:gravity="center"
+            android:lineSpacingExtra="4sp"
+            android:textColor="@color/some_white_text"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.002"
+            android:visibility="visible"
+            />
+        
+    </RelativeLayout>
+
+
+</RelativeLayout>
