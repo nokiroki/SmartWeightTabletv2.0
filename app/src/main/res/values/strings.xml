@@ -64,6 +64,8 @@
     <string name="rating_case_all_good">Текущий вес соответствует технологической карте</string>
     <string name="result_photo_text">Ваше фото</string>
     <string name="result_photo_example_text">В техкарте</string>
+    <string name="resulr_screen_dish">Блюдо</string>
+    <string name="result_screen_dish">Блюдо</string>
 
 
 </resources>
