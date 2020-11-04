@@ -64,8 +64,12 @@
     <string name="rating_case_all_good">Текущий вес соответствует технологической карте</string>
     <string name="result_photo_text">Ваше фото</string>
     <string name="result_photo_example_text">В техкарте</string>
-    <string name="resulr_screen_dish">Блюдо</string>
-    <string name="result_screen_dish">Блюдо</string>
+    <string name="result_screen_dish_head">Блюдо</string>
+    <string name="result_screen_dish_name">Гунканы с лососем и еще с чем-то для вариации в две строки</string>
+    <string name="result_screen_weight_head">Вес по техкарте</string>
+    <string name="result_screen_weight_norma">200г</string>
+    <string name="result_screen_weight_all_good">200г</string>
+    <string name="result_screen_weight_not_good">210г</string>
 
 
 </resources>
