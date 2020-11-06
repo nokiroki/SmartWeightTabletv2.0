@@ -9,7 +9,7 @@
     <string name="cancel_button">Отменить</string>
     <string name="for_proceed">Для продолжения приложите карточку!</string>
     <string name="card_got">Считываем информацию с метки</string>
-    
+
     <!-- Strings for final activity -->
     <string name="name">Имя - %s</string>
     <string name="position">Ресторан - %s</string>
@@ -21,56 +21,56 @@
     <string name="weight_require">Необходимый вес - %s</string>
     <string name="rating">%d / 5</string>
     <string name="problem">#Проблема (недовес или перевес)</string>
-    <string name="database_info">Заносим в базу данных</string>
     <string name="ok_button">OK</string>
 
-    <string-array name="database_info">
-        <item>Заносим в базу данных</item>
-        <item>Готово!</item>
-    </string-array>
 
-    <string-array name="problem">
-        <item>Недовес!</item>
-        <item>Перевес!</item>
-        <item>Всё в порядке</item>
-    </string-array>
+    <string name="your_photo">Ваше фото</string>
 
     <!-- String values for new final screen -->
 
-    <string name="your_photo">Ваше фото</string>
     <string name="pattern_photo">В техкарте</string>
-
     <string name="some_dish">Блюдо</string>
+
     <string name="dish_final">#dish_name</string>
-
     <string name="some_required_weight">Вес по техкарте</string>
-    <string name="required_weight">#mass</string>
 
+    <string name="required_weight">#mass</string>
     <string name="some_weight">Текущий вес</string>
+
     <string name="weight">#mass</string>
-    
     <string name="some_id">Имя сотрудника</string>
+
     <string name="id_employee">#employee_name</string>
     <string name="some_id_restaurant">Ресторан</string>
     <string name="id_restaurant">#restaurant_name</string>
-
     <string name="ok_button_final">OK</string>
 
     <string name="date_and_time">Дата и время</string>
+
     <string name="date_final">#date</string>
     <string name="time_final">#time</string>
-
     <string name="rating_case_not_good">%s\n\n%d г</string>
+
     <string name="rating_case_all_good">Текущий вес соответствует технологической карте</string>
     <string name="result_photo_text">Ваше фото</string>
     <string name="result_photo_example_text">В техкарте</string>
     <string name="result_screen_dish_head">Блюдо</string>
     <string name="result_screen_dish_name">Гунканы с лососем и еще с чем-то для вариации в две строки</string>
     <string name="result_screen_weight_head">Вес по техкарте</string>
-    <string name="result_screen_weight_norma">200г</string>
-    <string name="result_screen_weight_all_good">200г</string>
-    <string name="result_screen_weight_not_good">210г</string>
+    <string name="result_screen_weight_norma">#norma_weight</string>
+    <string name="result_screen_weight_current">#current_weight</string>
+    <string name="database_info">Заносим в базу данных</string>
+    <string-array name="problem">
+        <item>Недовес!</item>
+        <item>Перевес!</item>
+        <item>Всё в порядке</item>
+    </string-array>
 
+    <string-array name="database_info">
+        <item>Заносим в базу данных</item>
+        <item>Готово!</item>
+        <item>Ошибка с занесением в базу данных!</item>
+    </string-array>
 
 </resources>
 

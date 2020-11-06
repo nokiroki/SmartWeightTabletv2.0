@@ -171,7 +171,8 @@ public class DishBigActivity extends AppCompatActivity implements View.OnClickLi
                 .putExtra("fullName", json_.getString("fullName"))
                 .putExtra("department_name", json_.getString("department_name"))
                 .putExtra("photo_id_top", json_.getJSONObject("photo").getString("top"))
-                .putExtra("photo_id_rear", json_.getJSONObject("photo").getString("rear"));
+                .putExtra("photo_id_rear", json_.getJSONObject("photo").getString("rear"))
+                .putExtra("ImageName", ImageName);
         startActivity(intent);
         finish();
     }

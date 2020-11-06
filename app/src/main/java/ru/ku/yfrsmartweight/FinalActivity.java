@@ -39,7 +39,10 @@ public class FinalActivity extends AppCompatActivity {
 
 
     private ImageView imageTop;
-    private ImageView imageRear;
+    private ImageView imageExample;
+
+    private TextView ratingTextGood;
+    private TextView ratingTextBad;
 
     private TextView serverAnswer;
     private Button myButton;
@@ -80,7 +83,7 @@ public class FinalActivity extends AppCompatActivity {
                     final JSONObject dataTop = json.getJSONObject("data").getJSONObject("top");
                     final JSONObject dataRear = json.getJSONObject("data").getJSONObject("rear");
 
-                    downloadPool = Executors.newFixedThreadPool(2);
+                    downloadPool = Executors.newFixedThreadPool(1);
 
                     class downloadPic implements Runnable {
 
@@ -119,7 +122,6 @@ public class FinalActivity extends AppCompatActivity {
                         }
                     }
                     downloadPool.execute(new downloadPic(dataTop, imageTop));
-                    downloadPool.execute(new downloadPic(dataRear, imageRear));
                     //myButton.setVisibility(View.VISIBLE);
                 }
 
@@ -155,7 +157,7 @@ public class FinalActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_final);
+        setContentView(R.layout.final_screen);
         Log.d(TAG, "starting to create final activity");
 
         serverAnswer = findViewById(R.id.final_info_server_answer);
@@ -182,10 +184,13 @@ public class FinalActivity extends AppCompatActivity {
         TextView dish = findViewById(R.id.final_dish_name);
         TextView dishMassCurrent = findViewById(R.id.final_mass);
         TextView dishMass = findViewById(R.id.final_current_mass);
-        TextView ratingText = findViewById(R.id.final_rating_text);
+
+        ratingTextGood = findViewById(R.id.rating_text_all_good);
+        ratingTextBad = findViewById(R.id.rating_text_not_good);
+
 
         imageTop = findViewById(R.id.final_photo_top);
-        imageRear = findViewById(R.id.final_photo_rear);
+        imageExample = findViewById(R.id.final_photo_example);
 
         //TODO разделение топ фото и бокового фото
 
@@ -193,30 +198,37 @@ public class FinalActivity extends AppCompatActivity {
         name.setText(String.format(name.getText().toString(), bundle.getString("fullName")));
         Date dateNow = new Date();
 
-        date.setText(String.format(date.getText().toString(), new SimpleDateFormat("dd.MM.yyyy", Locale.US).format(dateNow)));
-        time.setText(String.format(time.getText().toString(), new SimpleDateFormat("HH:mm", Locale.US).format(dateNow)));
+        date.setText(new SimpleDateFormat("dd.MM.yyyy", Locale.US).format(dateNow));
+        time.setText(new SimpleDateFormat("HH:mm", Locale.US).format(dateNow));
 
-        department.setText(String.format(department.getText().toString(), bundle.getString("department_name")));
+        department.setText(bundle.getString("department_name"));
         dish.setText(bundle.getString("dishName"));
-        dishMassCurrent.setText(String.format(dishMassCurrent.getText().toString(), bundle.getInt("mass")));
-        dishMass.setText(String.format(dishMass.getText().toString(), MainActivity.CURR_MASS));
-        ratingText.setText("Ждём оценки");
-        setTextInfo(ratingText);
+        dishMassCurrent.setText(bundle.getInt("mass") + " г");
+        dishMass.setText(MainActivity.CURR_MASS + " г");
+        setTextInfo();
+
+        try {
+            ImageLoader.setImageView(bundle.getString("ImageName"), imageExample, this);
+        } catch (Exception e) {
+            Log.e(TAG, "Exception while loading example photo");
+            Log.e(TAG ,e.toString());
+        }
 
     }
 
-    private void setTextInfo(TextView ratingText) {
+    private void setTextInfo() {
         float rating = ((float) MainActivity.CURR_MASS / (float) bundle.getInt("mass"));
         Log.d(TAG, "Rating number - " + rating);
         if (rating < 0.9) {
-            ratingText.setText("Недовес!");
-            ratingText.setTextColor(getResources().getColor(R.color.ratingTextRed));
+            ratingTextBad.setVisibility(View.VISIBLE);
+            int diff = bundle.getInt("mass") - MainActivity.CURR_MASS;
+            ratingTextBad.setText(String.format(ratingTextBad.getText().toString(), "Недовес!", diff));
         } else if (rating > 1.1) {
-            ratingText.setText("Перевес!");
-            ratingText.setTextColor(getResources().getColor(R.color.ratingTextRed));
+            ratingTextBad.setVisibility(View.VISIBLE);
+            int diff = MainActivity.CURR_MASS - bundle.getInt("mass");
+            ratingTextBad.setText(String.format(ratingTextBad.getText().toString(), "Перевес!", diff));
         } else {
-            ratingText.setText("Вес в норме");
-            ratingText.setTextColor(getResources().getColor(R.color.ratingTextGreen));
+            ratingTextGood.setVisibility(View.VISIBLE);
         }
 
     }

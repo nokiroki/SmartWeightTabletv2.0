@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="ru.ku.yfrsmartweight">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,12 +13,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".FinalActivity"
+            android:name=".TestActivity"
             android:screenOrientation="userLandscape"
             android:theme="@style/AppTheme.NoActionBar"
             tools:ignore="LockedOrientationActivity">
-        </activity>
 
+        </activity>
+        <activity
+            android:name=".FinalActivity"
+            android:screenOrientation="userLandscape"
+            android:theme="@style/AppTheme.NoActionBar"
+            tools:ignore="LockedOrientationActivity"/>
         <activity
             android:name=".DishBigActivity"
             android:label="@string/title_activity_dish_big"
@@ -42,7 +49,5 @@
             </intent-filter>
         </service>
     </application>
-
-    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

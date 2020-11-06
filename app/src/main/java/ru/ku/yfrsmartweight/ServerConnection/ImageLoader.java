@@ -112,7 +112,7 @@ public class ImageLoader {
         String fullFileName = file.getAbsolutePath();
         Bitmap bmp = BitmapFactory.decodeFile(fullFileName);
         // Проверить работоспособность
-        imageView.setImageBitmap(getRoundedBitmap(bmp, 20));
+        //imageView.setImageBitmap(getRoundedBitmap(bmp, 20));
         return 1;
     }
 
