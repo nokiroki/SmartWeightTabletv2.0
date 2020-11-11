@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="888dp"
+    android:layout_height="480dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:background="@drawable/dish_big_background">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/panel_big_card_image"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        app:cardCornerRadius="20dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp">
+
+        <ImageView
+            android:id="@+id/panel_big_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/gunkani_losos"
+            android:scaleType="centerCrop"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/panel_big_dish_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/panel_big_card_image"
+        android:layout_alignTop="@id/panel_big_card_image"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="40dp"
+        android:text="@string/panel_big_dish_info"
+        android:textColor="@color/colorDishBigInfoText"
+        android:textStyle="bold"
+        android:textSize="21sp"
+        />
+
+    <TextView
+        android:id="@+id/panel_big_dish"
+        android:layout_width="440dp"
+        android:layout_height="80dp"
+        android:layout_alignStart="@id/panel_big_dish_info"
+        android:layout_below="@id/panel_big_dish_info"
+        android:layout_marginTop="8dp"
+        android:text="@string/panel_big_dish"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorDishBigText"
+        />
+
+    <TextView
+        android:id="@+id/panel_big_weight_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/panel_big_dish_info"
+        android:layout_below="@id/panel_big_dish"
+        android:layout_marginTop="8dp"
+        android:text="@string/panel_big_weight_info"
+        android:textColor="@color/colorDishBigInfoText"
+        android:textStyle="bold"
+        android:textSize="21sp"
+        />
+
+    <TextView
+        android:id="@+id/panel_big_weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/panel_big_dish_info"
+        android:layout_below="@id/panel_big_weight_info"
+        android:layout_marginTop="8dp"
+        android:text="@string/panel_big_weight"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorDishBigText"
+        />
+
+    <TextView
+        android:id="@+id/panel_big_weight_current_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/panel_big_weight_info"
+        android:layout_toEndOf="@id/panel_big_weight_info"
+        android:layout_marginStart="120dp"
+        android:text="@string/panel_big_weight_info"
+        android:textColor="@color/colorDishBigInfoText"
+        android:textStyle="bold"
+        android:textSize="21sp"
+        />
+
+    <TextView
+        android:id="@+id/panel_big_weight_current"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/panel_big_weight_current_info"
+        android:layout_below="@id/panel_big_weight_current_info"
+        android:layout_marginTop="8dp"
+        android:text="@string/panel_big_current_weight"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorDishBigText"
+        />
+
+    <ImageView
+        android:id="@+id/panel_big_povar_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/panel_big_card_image"
+        android:layout_below="@id/panel_big_card_image"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/povar_card"
+        android:contentDescription="TODO" />
+
+    <TextView
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/panel_big_povar_card"
+        android:layout_toEndOf="@id/panel_big_povar_card"
+        android:layout_marginStart="40dp"
+        android:text="@string/panel_big_info"
+        android:textSize="21sp"
+        android:textColor="@color/colorDishBigText"
+        />
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/panel_big_cancel_button"
+        android:layout_toStartOf="@id/panel_big_cancel_button"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/dish_big_separator"
+        />
+
+    <Button
+        android:id="@+id/panel_big_cancel_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/cancel_dish_big_button"
+        android:text="@string/panel_big_cancel_button"
+        android:textColor="@color/colorDishBigButtonText"
+        android:textSize="21sp"
+        android:letterSpacing="0.02"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        />
+
+</RelativeLayout>

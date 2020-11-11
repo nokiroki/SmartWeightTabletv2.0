@@ -26,9 +26,9 @@
 
             <ImageView
                 android:id="@+id/final_photo_top"
-                android:layout_width="320dp"
-                android:layout_height="320dp"
-                android:scaleType="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
                 tools:src="@tools:sample/backgrounds/scenic"
                 tools:ignore="ContentDescription" />
 
@@ -58,8 +58,9 @@
             <ImageView
                 android:id="@+id/final_photo_example"
                 android:layout_width="320dp"
-                android:layout_height="320dp"
-                android:scaleType="center"
+                android:layout_height="232dp"
+                android:scaleType="centerCrop"
+
                 tools:src="@tools:sample/backgrounds/scenic"
                 tools:ignore="ContentDescription" />
 
@@ -103,6 +104,7 @@
             android:text="@string/result_screen_dish_name"
             android:textColor="@color/result_dark"
             android:textSize="30sp"
+            android:textStyle="bold"
             android:translationY="-2.77sp" />
 
         <TextView
@@ -130,7 +132,7 @@
             android:gravity="top"
             android:letterSpacing="0.02"
             android:lineSpacingExtra="11sp"
-            android:text="@string/result_screen_weight_head"
+            android:text="@string/result_screen_weight_head_current"
             android:textColor="@color/result_light"
             android:textSize="21sp"
             android:translationY="-5.7sp" />
@@ -147,6 +149,7 @@
             android:text="@string/result_screen_weight_norma"
             android:textColor="@color/result_dark"
             android:textSize="30sp"
+            android:textStyle="bold"
             android:translationY="-2.77sp" />
 
         <TextView
@@ -161,6 +164,7 @@
             android:text="@string/result_screen_weight_current"
             android:textColor="@color/result_without_problem"
             android:textSize="30sp"
+            android:textStyle="bold"
             android:translationY="-2.77sp"
             android:visibility="visible" />
 
@@ -203,6 +207,7 @@
             android:text="@string/id_employee"
             android:textColor="@color/result_dark"
             android:textSize="26sp"
+            android:textStyle="bold"
             android:translationY="-2.77sp" />
 
         <TextView
@@ -237,7 +242,7 @@
 
         <Button
             android:id="@+id/final_ok_button"
-            android:layout_width="350dp"
+            android:layout_width="600dp"
             android:layout_height="80dp"
             android:layout_below="@id/final_department"
             android:layout_alignStart="@id/some_id_employee"
@@ -278,6 +283,7 @@
             android:text="@string/date_final"
             android:textColor="@color/result_dark"
             android:textSize="26sp"
+            android:textStyle="bold"
             android:translationY="-2.77sp" />
 
         <TextView
@@ -293,6 +299,7 @@
             android:text="@string/time_final"
             android:textColor="@color/result_dark"
             android:textSize="26sp"
+            android:textStyle="bold"
             android:translationY="-2.77sp" />
 
         <TextView

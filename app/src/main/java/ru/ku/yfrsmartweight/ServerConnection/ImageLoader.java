@@ -15,9 +15,13 @@ import android.util.Log;
 import android.widget.ImageView;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.io.RandomAccessFile;
+import java.nio.MappedByteBuffer;
+import java.nio.channels.FileChannel;
 
 public class ImageLoader {
     public enum Mode {
@@ -92,6 +96,7 @@ public class ImageLoader {
         Log.d(TAG, "CreatingImageView");
         if (mode == Mode.CreatingImageView) {
             Bitmap image = BitmapFactory.decodeByteArray(bytes,0,bytes.length);
+
             imageView.setImageBitmap(image);
         }
         return imageView;
@@ -111,11 +116,11 @@ public class ImageLoader {
             return 0;
         String fullFileName = file.getAbsolutePath();
         Bitmap bmp = BitmapFactory.decodeFile(fullFileName);
+        Log.d(TAG, " " + bmp.getHeight() + " " + bmp.getWidth());
         // Проверить работоспособность
-        //imageView.setImageBitmap(getRoundedBitmap(bmp, 20));
+        imageView.setImageBitmap(bmp);
         return 1;
     }
-
 
     /* Checks if external storage is available for read and write */
     static public boolean isExternalStorageWritable() {

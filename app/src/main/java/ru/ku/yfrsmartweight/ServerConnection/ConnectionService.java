@@ -37,8 +37,10 @@ public class ConnectionService extends Service {
 
     //private final String URI = "ws://10.0.1.17:8080";
     //private final String URI = "ws://192.168.43.237:8080";
-    //private final String URI = "ws://192.168.88.32:8080";
-    private final String URI = "ws://10.0.1.4:8080";
+    private final String URI = "ws://192.168.88.32:8080";
+    //private final String URI = "ws://smartweight.ddns.net:8080";
+    //private final String URI = "ws://192.168.88.89:8080";
+    //private final String URI = "ws://10.0.1.4:8080";
 
 
     private static int increment = 0;

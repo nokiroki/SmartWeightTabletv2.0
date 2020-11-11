@@ -9,6 +9,16 @@
     <string name="cancel_button">Отменить</string>
     <string name="for_proceed">Для продолжения приложите карточку!</string>
     <string name="card_got">Считываем информацию с метки</string>
+    
+    <string name="panel_big_dish_info">Определено</string>
+    <string name="panel_big_dish">#DISH_NAME</string>
+    <string name="panel_big_weight_current_info">Текущий вес</string>
+    <string name="panel_big_weight_info">Вес по техкарте</string>
+    <string name="panel_big_current_weight">#196г</string>
+    <string name="panel_big_weight">#200г</string>
+    <string name="panel_big_info">Для продолжения приложите личную карточку повара</string>
+    <string name="panel_big_cancel_button">Отменить</string>
+
 
     <!-- Strings for final activity -->
     <string name="name">Имя - %s</string>
@@ -57,6 +67,8 @@
     <string name="result_screen_dish_head">Блюдо</string>
     <string name="result_screen_dish_name">Гунканы с лососем и еще с чем-то для вариации в две строки</string>
     <string name="result_screen_weight_head">Вес по техкарте</string>
+    <string name="result_screen_weight_head_current">Текущий вес</string>
+
     <string name="result_screen_weight_norma">#norma_weight</string>
     <string name="result_screen_weight_current">#current_weight</string>
     <string name="database_info">Заносим в базу данных</string>

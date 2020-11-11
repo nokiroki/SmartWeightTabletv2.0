@@ -9,6 +9,18 @@
     <color name="colorDishPanelText">#4923FA</color>
     <color name="colorDishPanelBackgroundDisabled">#7C7B7E</color>
 
+    <color name="colorDishPanelBackgroundNew">#FFFFFF</color>
+    <color name="colorDishPanelBackgroundPressedNew">#D6C8C8</color>
+    <color name="colorDishPanelTextNew">#262628</color>
+    <color name="colorDishPanelBackgroundDisabledNew">#575759</color>
+
+    <color name="colorDishBigBackground">#FFFFFF</color>
+    <color name="colorDishBigInfoText">#BDC5CB</color>
+    <color name="colorDishBigText">#000000</color>
+    <color name="colorDishBigButton">#000000</color>
+    <color name="colorDishBigButtonText">#FFFFFF</color>
+    <color name="colorDishBigSeparator">#E5E5E5</color>
+
     <color name="ratingTextRed">#FF0000</color>
     <color name="ratingTextGreen">#5AFF00</color>
 

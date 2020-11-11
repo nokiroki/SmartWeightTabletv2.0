@@ -25,7 +25,7 @@ import ru.ku.yfrsmartweight.ServerConnection.ObjectStructures;
     public static final int USER_ID_DISH = 6000;
 
 
-    private static final int INFLATE_CONTAINER = R.layout.dish_panel;
+    private static final int INFLATE_CONTAINER = R.layout.dish_panel_new;
 
 
     // Создание одной панели на основе пары <id - Название> и id фото блюда
@@ -38,7 +38,7 @@ import ru.ku.yfrsmartweight.ServerConnection.ObjectStructures;
         // Подключение контейнера с видом панели
         LayoutInflater inflater = LayoutInflater.from(context);
         View view = inflater.inflate(INFLATE_CONTAINER, row, false);
-
+        view.setBackgroundResource(R.drawable.dish_panel_background);
         view.setId(id + USER_ID_DISH);
 
         ImageView image = view.findViewById(R.id.dish_image);

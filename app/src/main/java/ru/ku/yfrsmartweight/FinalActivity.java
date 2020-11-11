@@ -43,6 +43,7 @@ public class FinalActivity extends AppCompatActivity {
 
     private TextView ratingTextGood;
     private TextView ratingTextBad;
+    private TextView dishMass;
 
     private TextView serverAnswer;
     private Button myButton;
@@ -79,7 +80,7 @@ public class FinalActivity extends AppCompatActivity {
                         serverAnswer.setText("Ошибка на сервере! Повторите измерение!");
                         serverAnswer.setTextColor(getResources().getColor(R.color.ratingTextRed));
                     }
-                } else if (query.equals("DownloadImage") && MainActivity.isInitToRaspberry) {
+                } else if (query.equals("DownloadImageCamera") && MainActivity.isInitToRaspberry) {
                     final JSONObject dataTop = json.getJSONObject("data").getJSONObject("top");
                     final JSONObject dataRear = json.getJSONObject("data").getJSONObject("rear");
 
@@ -167,7 +168,6 @@ public class FinalActivity extends AppCompatActivity {
         bundle = getIntent().getExtras();
 
         myButton = findViewById(R.id.final_ok_button);
-
         //myButton.setVisibility(View.INVISIBLE);
 
         myButton.setOnClickListener(new View.OnClickListener() {
@@ -183,7 +183,7 @@ public class FinalActivity extends AppCompatActivity {
         TextView department = findViewById(R.id.final_department);
         TextView dish = findViewById(R.id.final_dish_name);
         TextView dishMassCurrent = findViewById(R.id.final_mass);
-        TextView dishMass = findViewById(R.id.final_current_mass);
+        dishMass = findViewById(R.id.final_current_mass);
 
         ratingTextGood = findViewById(R.id.rating_text_all_good);
         ratingTextBad = findViewById(R.id.rating_text_not_good);
@@ -195,7 +195,7 @@ public class FinalActivity extends AppCompatActivity {
         //TODO разделение топ фото и бокового фото
 
 
-        name.setText(String.format(name.getText().toString(), bundle.getString("fullName")));
+        name.setText(bundle.getString("fullName"));
         Date dateNow = new Date();
 
         date.setText(new SimpleDateFormat("dd.MM.yyyy", Locale.US).format(dateNow));
@@ -208,6 +208,7 @@ public class FinalActivity extends AppCompatActivity {
         setTextInfo();
 
         try {
+            Log.d(TAG, "Uploading example photo to final activity");
             ImageLoader.setImageView(bundle.getString("ImageName"), imageExample, this);
         } catch (Exception e) {
             Log.e(TAG, "Exception while loading example photo");
@@ -223,10 +224,12 @@ public class FinalActivity extends AppCompatActivity {
             ratingTextBad.setVisibility(View.VISIBLE);
             int diff = bundle.getInt("mass") - MainActivity.CURR_MASS;
             ratingTextBad.setText(String.format(ratingTextBad.getText().toString(), "Недовес!", diff));
+            dishMass.setTextColor(getResources().getColor(R.color.result_with_problem));
         } else if (rating > 1.1) {
             ratingTextBad.setVisibility(View.VISIBLE);
             int diff = MainActivity.CURR_MASS - bundle.getInt("mass");
             ratingTextBad.setText(String.format(ratingTextBad.getText().toString(), "Перевес!", diff));
+            dishMass.setTextColor(getResources().getColor(R.color.result_with_problem));
         } else {
             ratingTextGood.setVisibility(View.VISIBLE);
         }
@@ -241,7 +244,8 @@ public class FinalActivity extends AppCompatActivity {
 
     @Override
     protected void onDestroy() {
-        downloadPool.shutdown();
+        if (downloadPool != null)
+            downloadPool.shutdown();
         super.onDestroy();
         unbindService(sc);
     }
