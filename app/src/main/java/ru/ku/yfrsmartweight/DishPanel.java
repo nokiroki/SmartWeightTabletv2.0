@@ -37,6 +37,7 @@ import ru.ku.yfrsmartweight.ServerConnection.ObjectStructures;
 
         // Подключение контейнера с видом панели
         LayoutInflater inflater = LayoutInflater.from(context);
+
         View view = inflater.inflate(INFLATE_CONTAINER, row, false);
         view.setBackgroundResource(R.drawable.dish_panel_background);
         view.setId(id + USER_ID_DISH);

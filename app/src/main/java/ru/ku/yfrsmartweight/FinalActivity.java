@@ -82,7 +82,6 @@ public class FinalActivity extends AppCompatActivity {
                     }
                 } else if (query.equals("DownloadImageCamera") && MainActivity.isInitToRaspberry) {
                     final JSONObject dataTop = json.getJSONObject("data").getJSONObject("top");
-                    final JSONObject dataRear = json.getJSONObject("data").getJSONObject("rear");
 
                     downloadPool = Executors.newFixedThreadPool(1);
 

@@ -5,6 +5,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.content.pm.ServiceInfo;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -92,7 +93,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         downloadPool = Executors.newFixedThreadPool(8);
         intent = new Intent(INTENT_ACTION);
         intent.setPackage(getPackageName());
-
         startService(intent);
         bindService(intent, sConn, 0);
 

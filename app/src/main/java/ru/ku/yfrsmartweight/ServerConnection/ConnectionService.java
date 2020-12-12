@@ -160,5 +160,6 @@ public class ConnectionService extends Service {
         Log.d(TAG, "Service onBind!");
         return new MyWebSocketInterface();
     }
+    
 
 }
